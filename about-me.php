@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/about-me.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <title>Portfolio Žaneta Sabadková</title>
-</head>
-<body>
- 
-    <?php require "assets/header.php"; ?>
-   
-    <main>
-        <h1>O mně</h1>
-        <p>Vítejte na mých webových stránkách. </p>
-        <p>Jmenuji se Žaneta Sabadková a je mi 33 let. Pracoval jsem jako Managerka obchodu a při rodičovské dovolené jsem si udělala kurz na Webovou vývojářku.</p>
-        <p>Ráda čtu a chodím do fitka.</p>
-        <p>Mým hlavním koníčkem je programování, hlavně v PHP. Který se snad jednou stane i mým zaměstnáním.</p>
-    </main>
-       
-    <?php require "assets/footer.php"?>
-</body>
-</html>
+<?php include __DIR__ . '/partials/header.php'; ?>
+
+<main class="pf">
+    <section class="pf-about">
+        <div class="pf-about-inner">
+            <div class="about-text">
+                <span class="pf-s-kicker">O mně</span>
+                <div class="pf-s-title" style="margin-bottom: 20px;">Ahoj, jsem Žaneta!</div>
+                <p>
+                    Pracuji jako IT specialistka a postupně si stavím pevný základ ve webovém vývoji.
+                </p>
+                <p>
+                    Zajímá mě PHP, WordPress, Docker, Git a správa webů. Chci rozumět tomu, jak věci opravdu fungují — nejen je slepě používat.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<?php include __DIR__ . '/partials/footer.php'; ?>

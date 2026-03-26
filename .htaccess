@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# pokud existuje skutečný soubor nebo složka, nepřepisuj
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# hezké URL
+RewriteRule ^o-mne/?$ o-mne.php [L,QSA]
+RewriteRule ^skills/?$ skills.php [L,QSA]
+RewriteRule ^projekty/?$ projekty.php [L,QSA]
+RewriteRule ^kontakt/?$ kontakt.php [L,QSA]
