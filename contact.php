@@ -1,13 +1,26 @@
 <?php include __DIR__ . '/partials/header.php'; ?>
 
 <main class="pf">
-    <section class="pf-about">
-        <div class="pf-about-inner">
-            <div class="about-text">
-                <span class="pf-s-kicker">O mně</span>
-                <div class="pf-s-title" style="margin-bottom: 20px;"></div>
-              
-                </p>
+    <section class="pf-contact">
+        <div class="pf-section-inner">
+            <span class="pf-s-kicker">Kontakt</span>
+            <h1 class="pf-s-title">Napište mi</h1>
+            <div class="pf-contact-grid">
+                <a class="pf-contact-card" href="mailto:zaneta.sabadkova@gmail.com">
+                    <span>✉️</span>
+                    <strong>E-mail</strong>
+                    <p>zaneta.sabadkova@gmail.com</p>
+                </a>
+                <a class="pf-contact-card" href="tel:+420724831189">
+                    <span>📞</span>
+                    <strong>Telefon</strong>
+                    <p>+420 724 831 189</p>
+                </a>
+                <a class="pf-contact-card" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                    <span>💼</span>
+                    <strong>LinkedIn</strong>
+                    <p>Profil na LinkedIn</p>
+                </a>
             </div>
         </div>
     </section>

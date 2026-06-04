@@ -3,19 +3,20 @@
 <main class="pf">
     <section class="pf-hero">
         <div class="pf-hero-inner">
-            <div>
+            <div class="pf-hero-copy">
                 <div class="pf-availability">
                     <span class="pf-avail-dot"></span>
-                    Dostupná pro spolupráci
+                    Otevřená novým projektům a spolupráci
                 </div>
                 <div class="pf-hero-name">Žaneta<br><span>Sabadková</span></div>
-                <div class="pf-hero-role"><strong>IT Specialist</strong> &amp; Web Developer</div>
+                <div class="pf-hero-role"><strong>IT Specialist • WordPress Developer • Systems Administrator</div>
                 <p class="pf-hero-desc">
-                    Docker jede!
+                    Pomáhám organizacím spravovat webové aplikace, automatizovat procesy a zjednodušovat každodenní práci uživatelů.
+                    Specializuji se na WordPress, PHP, Docker, Linux, LDAP integrace a správu podnikových systémů. Ve své práci propojuji technické řešení s potřebami běžných uživatelů.
                 </p>
                 <div class="pf-hero-btns">
-                    <a href="/projekty" class="pf-btn-p">Zobrazit projekty →</a>
-                    <a href="/kontakt" class="pf-btn-s">Kontakt</a>
+                    <a href="/projekty" class="pf-btn-p">Zobrazit portfolio →</a>
+                    <a href="/documents/Sabadkova_Zaneta_CV.pdf" class="pf-btn-s" target="_blank" rel="noreferrer">Stáhnout CV</a>
                 </div>
             </div>
             <div class="pf-hero-photo">

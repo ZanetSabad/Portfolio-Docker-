@@ -1,93 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/portfolio.css">
-    <title>Portfolio</title>
-</head>
-<body>
-    <?php require "assets/header.php" ?>
+<?php include __DIR__ . '/partials/header.php'; ?>
 
-    <main>
-        <section class="preview">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="front">
-                            <img src="img/portfolio_mui.png" alt="portfolio React">
-                      
-                            <p class="title-front">Webová stránka</p></a>
-                        </div>
-                        <div class="back">
-                            <a href="https://my-portfolio-one-page.vercel.app/" target="_blank">Webová stránka</a>
-                        </div>
-                    </div>
-                </div>
+<main class="pf">
+    <section class="pf-page-hero">
+        <div class="pf-section-inner">
+            <span class="pf-s-kicker">Portfolio</span>
+            <h1 class="pf-s-title">Vybrané projekty</h1>
+        </div>
+    </section>
 
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                    <div class="front">
-                            <img src="img/contact.png" alt="kontaktní formulář">
-                            <p class="title-front">Kontaktní formulář</p></a>
+    <section class="pf-projects-preview pf-projects-full">
+        <div class="pf-section-inner">
+            <div class="pf-project-grid">
+                <a class="pf-project-card pf-card-purple" href="https://my-portfolio-one-page.vercel.app/" target="_blank" rel="noreferrer">
+                    <div class="pf-project-media"><img src="/assets/img/portfolio_mui.png" alt="Portfolio React"></div>
+                    <div class="pf-project-body">
+                        <div class="pf-tags"><span>React</span><span>MUI</span></div>
+                        <h3>Webová stránka</h3>
                     </div>
-                    <div class="back">
-                    <a href="https://contact-form-fawn.vercel.app/" target="_blank">Kontaktní formulář - React</a>
+                </a>
+                <a class="pf-project-card pf-card-blue" href="https://contact-form-fawn.vercel.app/" target="_blank" rel="noreferrer">
+                    <div class="pf-project-media"><img src="/assets/img/Contact.png" alt="Kontaktní formulář"></div>
+                    <div class="pf-project-body">
+                        <div class="pf-tags"><span>React</span><span>Form</span></div>
+                        <h3>Kontaktní formulář</h3>
                     </div>
-                </div>
+                </a>
+                <a class="pf-project-card pf-card-green" href="https://aplikace-ukoly-2wdh.vercel.app/" target="_blank" rel="noreferrer">
+                    <div class="pf-project-media"><img src="/assets/img/buy_list.png" alt="Aplikace na úkoly"></div>
+                    <div class="pf-project-body">
+                        <div class="pf-tags"><span>React</span><span>To do</span></div>
+                        <h3>Aplikace na úkoly</h3>
+                    </div>
+                </a>
+                <a class="pf-project-card pf-card-orange" href="https://portfolio-snowy-rho.vercel.app/" target="_blank" rel="noreferrer">
+                    <div class="pf-project-media"><img src="/assets/img/portfolio-html.png" alt="Portfolio v HTML"></div>
+                    <div class="pf-project-body">
+                        <div class="pf-tags"><span>HTML</span><span>CSS</span></div>
+                        <h3>Portfolio v HTML</h3>
+                    </div>
+                </a>
+                <a class="pf-project-card pf-card-red" href="http://sabizany.cz/" target="_blank" rel="noreferrer">
+                    <div class="pf-project-media"><img src="/assets/img/bradavice.png" alt="Bradavice v PHP"></div>
+                    <div class="pf-project-body">
+                        <div class="pf-tags"><span>PHP</span><span>Web</span></div>
+                        <h3>Bradavice v PHP</h3>
+                    </div>
+                </a>
             </div>
+        </div>
+    </section>
+</main>
 
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                    <div class="front">
-                            <img src="img/buy_list.png" alt="aplikace na úkoly">
-                            <p class="title-front">Aplikace na úkoly</p>
-                    </div>
-                    <div class="back">
-                    <a href="https://aplikace-ukoly-2wdh.vercel.app/" target="_blank">Alikace na úkoly - React</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                    <div class="front">            
-                            <img src="img/portfolio-html.png" alt="portfolio html">
-                            <p class="title-front">Portfolio v HTML</p>
-                    </div>
-                    <div class="back">
-                        <a href="https://portfolio-snowy-rho.vercel.app/" target="_blank">HTML</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                    <div class="front">            
-                            <img src="img/bradavice.png" alt="Bradavice">
-                            <p class="title-front">Bradavice v PHP</p>
-                    </div>
-                    <div class="back">
-                        <a href="http://sabizany.cz/" target="_blank">Bradavice - PHP</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- <section class="portfolio-card">
-          
-         
-            <a href="https://aplikace-ukoly-2wdh.vercel.app/">
-                <img src="img/buy_list.png" alt="aplikace na úkoly">
-            </a>
-        </section> -->
-       
-        
-    </main>
-
-    <?php require "assets/footer.php"?>
-    
-</body>
-</html>
+<?php include __DIR__ . '/partials/footer.php'; ?>

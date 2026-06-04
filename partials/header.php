@@ -9,15 +9,15 @@
 <body>
 
 <nav class="pf-nav">
-    <div class="pf-logo">
+    <a href="/" class="pf-logo" aria-label="Domů">
         <span class="pf-logo-dot"></span>
         Žaneta Sabadková
-    </div>
+    </a>
     <div class="pf-nav-links">
-        <a href="/">Domů</a>
         <a href="/o-mne">O mně</a>
         <a href="/skills">Skills</a>
-        <a href="/projekty">Projekty</a>
+        <a href="/projekty">Portfolio</a>
+        <a href="/vzdelani">Vzdělání</a>
         <a href="/kontakt" class="pf-nav-cta">Kontakt</a>
     </div>
 </nav>
