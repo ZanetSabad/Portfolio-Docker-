@@ -1,0 +1,58 @@
+# CI pipeline – spustí se při každém pushi a pull requestu do větve main
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # 1. Kontrola syntaxe všech PHP souborů (stejná verze PHP jako v Dockerfile)
+  php-lint:
+    name: Kontrola PHP syntaxe
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stažení kódu
+        uses: actions/checkout@v4
+
+      - name: php -l na všech souborech
+        run: |
+          docker run --rm -v "$PWD":/app -w /app php:8.2-cli \
+            sh -c 'find . -name "*.php" -print0 | xargs -0 -n1 php -l'
+
+  # 2. Sestavení Docker image a test, že se stránky načtou
+  docker:
+    name: Docker build a test stránek
+    runs-on: ubuntu-latest
+    needs: php-lint
+    steps:
+      - name: Stažení kódu
+        uses: actions/checkout@v4
+
+      - name: Sestavení image
+        run: docker build -t portfolio .
+
+      - name: Spuštění kontejneru
+        run: |
+          docker run -d --name portfolio -p 8080:80 portfolio
+          # počkáme, až Apache naběhne
+          for i in $(seq 1 20); do
+            curl -s -o /dev/null http://localhost:8080/ && break
+            sleep 1
+          done
+
+      - name: Test stránek
+        run: |
+          fail=0
+          for path in / /o-mne /zkusenosti /skills /projekty /kontakt \
+                      /assets/css/style.css /documents/Sabadkova_Zaneta_CV.pdf; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "http://localhost:8080$path")
+            echo "$code  $path"
+            [ "$code" = "200" ] || fail=1
+          done
+          exit $fail
+
+      - name: Logy kontejneru (při chybě)
+        if: failure()
+        run: docker logs portfolio
