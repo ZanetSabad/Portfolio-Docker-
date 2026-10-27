@@ -42,3 +42,21 @@ Projekt slouží hlavně jako moje **vývojová laboratoř**, kde si zkouším:
 ```bash
 git clone https://github.com/ZanetSabad/Portfolio-Docker-.git
 cd Portfolio-Docker-
+```
+
+### 2. Spuštění v Dockeru
+```bash
+docker compose up -d --build
+```
+
+- Portfolio: http://localhost:8080
+- WordPress: http://localhost:8081
+
+Zastavení: `docker compose down`
+
+### 3. Spuštění bez Dockeru (jen PHP)
+```bash
+php -S localhost:8000 router.php
+```
+
+Pak otevřete http://localhost:8000

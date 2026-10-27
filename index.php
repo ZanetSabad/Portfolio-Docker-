@@ -9,7 +9,7 @@
                     Otevřená novým projektům a spolupráci
                 </div>
                 <div class="pf-hero-name">Žaneta<br><span>Sabadková</span></div>
-                <div class="pf-hero-role"><strong>IT Specialist • WordPress Developer • Systems Administrator</div>
+                <div class="pf-hero-role"><strong>IT Specialist • WordPress Developer • Systems Administrator</strong></div>
                 <p class="pf-hero-desc">
                     Pomáhám organizacím spravovat webové aplikace, automatizovat procesy a zjednodušovat každodenní práci uživatelů.
                     Specializuji se na WordPress, PHP, Docker, Linux, LDAP integrace a správu podnikových systémů. Ve své práci propojuji technické řešení s potřebami běžných uživatelů.
