@@ -13,7 +13,6 @@ $routes = [
     '/zkusenosti' => 'experience.php',
     '/skills' => 'skills.php',
     '/projekty' => 'portfolio.php',
-    '/vzdelani' => 'education.php',
     '/kontakt' => 'contact.php',
 ];
 

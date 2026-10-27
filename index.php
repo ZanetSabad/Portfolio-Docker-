@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div class="pf-hero-photo">
-                <img src="/assets/img/my-foto1.png" alt="Žaneta Sabadková">
-                <div class="pf-photo-tag">📍 Praha · remote</div>
+                <img src="/assets/img/my-foto.webp" alt="Žaneta Sabadková" width="640" height="853">
+                <div class="pf-photo-tag">📍 Praha · Tábor · Písek · remote</div>
             </div>
         </div>
     </section>

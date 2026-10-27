@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Kontakt – Žaneta Sabadková';
-$pageDescription = 'Kontaktujte mě e-mailem, přes LinkedIn nebo GitHub.';
+$pageDescription = 'Kontaktujte mě e-mailem, přes LinkedIn nebo GitHub, nebo si stáhněte moje CV.';
 include __DIR__ . '/partials/header.php';
 ?>
 
@@ -15,20 +15,20 @@ include __DIR__ . '/partials/header.php';
                     <strong>E-mail</strong>
                     <p>zaneta.sabadkova@gmail.com</p>
                 </a>
-                <a class="pf-contact-card" href="tel:+420724831189">
-                    <span>📞</span>
-                    <strong>Telefon</strong>
-                    <p>+420 724 831 189</p>
-                </a>
-                <a class="pf-contact-card" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                <a class="pf-contact-card" href="https://www.linkedin.com/in/%C5%BEaneta-sabadkov%C3%A1-56542b213/" target="_blank" rel="noreferrer">
                     <span>💼</span>
                     <strong>LinkedIn</strong>
-                    <p>Profil na LinkedIn</p>
+                    <p>Žaneta Sabadková</p>
                 </a>
                 <a class="pf-contact-card" href="https://github.com/ZanetSabad" target="_blank" rel="noreferrer">
                     <span>🐙</span>
                     <strong>GitHub</strong>
                     <p>github.com/ZanetSabad</p>
+                </a>
+                <a class="pf-contact-card" href="/documents/Sabadkova_Zaneta_CV.pdf" target="_blank" rel="noreferrer">
+                    <span>📄</span>
+                    <strong>Životopis</strong>
+                    <p>Stáhnout CV (PDF)</p>
                 </a>
             </div>
         </div>

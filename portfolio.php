@@ -39,11 +39,9 @@ $caseStudies = [
 ];
 
 $otherProjects = [
-    ['url' => 'http://sabizany.cz/', 'img' => 'bradavice.png', 'title' => 'Bradavice v PHP', 'tags' => ['PHP', 'Web'], 'color' => 'red'],
-    ['url' => 'https://my-portfolio-one-page.vercel.app/', 'img' => 'portfolio_mui.png', 'title' => 'Webová stránka', 'tags' => ['React', 'MUI'], 'color' => 'purple'],
-    ['url' => 'https://contact-form-fawn.vercel.app/', 'img' => 'Contact.png', 'title' => 'Kontaktní formulář', 'tags' => ['React', 'Form'], 'color' => 'blue'],
-    ['url' => 'https://aplikace-ukoly-2wdh.vercel.app/', 'img' => 'buy_list.png', 'title' => 'Aplikace na úkoly', 'tags' => ['React', 'To do'], 'color' => 'green'],
-    ['url' => 'https://portfolio-snowy-rho.vercel.app/', 'img' => 'portfolio-html.png', 'title' => 'Portfolio v HTML', 'tags' => ['HTML', 'CSS'], 'color' => 'orange'],
+    ['url' => 'https://zanetasabadka.cz/sepekov/', 'img' => 'sepekov.webp', 'title' => 'Web ČSŽ Sepekov – vlastní WordPress šablona', 'tags' => ['WordPress', 'PHP', 'Šablona'], 'color' => 'green'],
+    ['url' => 'https://contact-form-fawn.vercel.app/', 'img' => 'Contact.webp', 'title' => 'Kontaktní formulář', 'tags' => ['React', 'Form'], 'color' => 'blue'],
+    ['url' => 'https://aplikace-ukoly-2wdh.vercel.app/', 'img' => 'buy_list.webp', 'title' => 'Aplikace na úkoly', 'tags' => ['React', 'To do'], 'color' => 'green'],
 ];
 ?>
 

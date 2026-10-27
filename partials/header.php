@@ -1,6 +1,9 @@
 <?php
 $pageTitle = $pageTitle ?? 'Žaneta Sabadková – WordPress & PHP Developer';
 $pageDescription = $pageDescription ?? 'Žaneta Sabadková – WordPress a PHP vývojářka a správa systémů. Vývoj pluginů, Linux, Docker, LDAP.';
+// Plná adresa webu – sociální sítě potřebují u náhledového obrázku absolutní URL
+$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$siteUrl = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost');
 $currentPath = rtrim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/') ?: '/';
 
 $navItems = [
@@ -8,7 +11,6 @@ $navItems = [
     '/zkusenosti' => 'Zkušenosti',
     '/skills' => 'Skills',
     '/projekty' => 'Portfolio',
-    '/vzdelani' => 'Vzdělání',
 ];
 ?>
 <!DOCTYPE html>
@@ -20,7 +22,9 @@ $navItems = [
     <meta name="description" content="<?= htmlspecialchars($pageDescription) ?>">
     <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?>">
     <meta property="og:description" content="<?= htmlspecialchars($pageDescription) ?>">
-    <meta property="og:image" content="/assets/img/my-foto1.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= htmlspecialchars($siteUrl . $currentPath) ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($siteUrl) ?>/assets/img/my-foto.jpg">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23d7633e'/></svg>">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>

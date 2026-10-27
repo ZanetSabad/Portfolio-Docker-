@@ -49,8 +49,7 @@ cd Portfolio-Docker-
 docker compose up -d --build
 ```
 
-- Portfolio: http://localhost:8080
-- WordPress: http://localhost:8081
+Portfolio poběží na http://localhost:8080
 
 Zastavení: `docker compose down`
 
@@ -60,3 +59,20 @@ php -S localhost:8000 router.php
 ```
 
 Pak otevřete http://localhost:8000
+
+---
+
+## Struktura projektu
+
+```
+├── index.php, about-me.php, experience.php,   # jednotlivé stránky
+│   skills.php, portfolio.php, contact.php
+├── partials/          # společná hlavička (menu, meta tagy) a patička
+├── assets/css/        # styly
+├── assets/img/        # obrázky (WebP)
+├── documents/         # CV ke stažení
+├── router.php         # hezké URL pro vestavěný PHP server
+├── .htaccess          # hezké URL pro Apache
+├── Dockerfile         # PHP 8.2 + Apache s mod_rewrite
+└── docker-compose.yml
+```

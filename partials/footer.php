@@ -5,7 +5,6 @@
         <a href="/zkusenosti">Zkušenosti</a>
         <a href="/skills">Skills</a>
         <a href="/projekty">Projekty</a>
-        <a href="/vzdelani">Vzdělání</a>
         <a href="/kontakt">Kontakt</a>
     </div>
 </footer>
