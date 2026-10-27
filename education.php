@@ -1,4 +1,8 @@
-<?php include __DIR__ . '/partials/header.php'; ?>
+<?php
+$pageTitle = 'Vzdělání – Žaneta Sabadková';
+$pageDescription = 'Kurzy a certifikáty: Webová vývojářka, Coursera, UX design.';
+include __DIR__ . '/partials/header.php';
+?>
 
 <main class="pf">
     <section class="pf-page-hero">
@@ -35,11 +39,6 @@
                     <span>🧩</span>
                     <strong>Wireframes</strong>
                     <p>UX podklady</p>
-                </a>
-                <a class="pf-doc-card" href="/documents/orientace_na_trhu_prace.pdf" target="_blank" rel="noreferrer">
-                    <span>🗂️</span>
-                    <strong>Orientace na trhu práce</strong>
-                    <p>Certifikát kurzu</p>
                 </a>
             </div>
         </div>

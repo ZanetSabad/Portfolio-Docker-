@@ -1,4 +1,8 @@
-<?php include __DIR__ . '/partials/header.php'; ?>
+<?php
+$pageTitle = 'Kontakt – Žaneta Sabadková';
+$pageDescription = 'Kontaktujte mě e-mailem, přes LinkedIn nebo GitHub.';
+include __DIR__ . '/partials/header.php';
+?>
 
 <main class="pf">
     <section class="pf-contact">
@@ -20,6 +24,11 @@
                     <span>💼</span>
                     <strong>LinkedIn</strong>
                     <p>Profil na LinkedIn</p>
+                </a>
+                <a class="pf-contact-card" href="https://github.com/ZanetSabad" target="_blank" rel="noreferrer">
+                    <span>🐙</span>
+                    <strong>GitHub</strong>
+                    <p>github.com/ZanetSabad</p>
                 </a>
             </div>
         </div>

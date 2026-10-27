@@ -1,4 +1,7 @@
-<?php include __DIR__ . '/partials/header.php'; ?>
+<?php
+$pageTitle = 'O mně – Žaneta Sabadková';
+include __DIR__ . '/partials/header.php';
+?>
 
 <main class="pf">
     <section class="pf-about">
@@ -7,13 +10,13 @@
                 <span class="pf-s-kicker">O mně</span>
                 <h1 class="pf-s-title">Ahoj, jsem Žaneta!</h1>
                 <p>
-                    Pracuji jako IT specialistka v CIIRC ČVUT, kde se věnuji správě webů, vývoji WordPress pluginů, LDAP integracím a správě interních systémů.
+                    Pracuji jako IT specialistka v CIIRC ČVUT, kde spravuji web ciirc.cvut.cz, vyvíjím WordPress pluginy, věnuji se LDAP integracím a správě interních systémů a připravuji návody pro uživatele i IT tým.
                 </p>
                 <p>
                     Baví mě hledat praktická řešení, automatizovat rutinní procesy a vytvářet aplikace, které uživatelům skutečně pomáhají.
                 </p>
                 <p>
-                    Ve volném čase se dále vzdělávám v oblastech Dockeru, Linuxu, Windows Serveru, Jenkinsu a cloudových technologií.
+                    Ve volném čase se dále vzdělávám – aktuálně hlavně v kybernetické bezpečnosti, práci s AI, CI/CD, Windows Serveru a cloudových technologiích.
                 </p>
             </div>
             <div class="pf-about-card">

@@ -1,4 +1,51 @@
-<?php include __DIR__ . '/partials/header.php'; ?>
+<?php
+$pageTitle = 'Portfolio – Žaneta Sabadková';
+$pageDescription = 'Projekty: WordPress pluginy pro správu clusteru, hlídání domén a integraci AI chatbota, PHP a webové projekty.';
+include __DIR__ . '/partials/header.php';
+
+$caseStudies = [
+    [
+        'icon' => '🖥️',
+        'title' => 'Správa přístupů na výpočetní cluster (Slurm)',
+        'goal' => 'Zjednodušit správu uživatelů výpočetního clusteru a jejich podílů na výkonu.',
+        'solution' => 'WordPress plugin, který zobrazuje uživatele a jejich zařazení do organizací, umožňuje nastavit fairshare pro organizace i jednotlivé uživatele a generuje konfigurační soubor pro cluster.',
+        'tags' => ['WordPress', 'PHP', 'Shell', 'Slurm'],
+    ],
+    [
+        'icon' => '📅',
+        'title' => 'Hlídání expirace domén',
+        'goal' => 'Žádná doména nesmí nečekaně vypršet.',
+        'solution' => 'Plugin s přehledem domén a termínů vypršení. Cron úloha posílá e-mailová upozornění správcům i vlastníkům domény 30, 14 a 7 dní před expirací.',
+        'tags' => ['WordPress', 'PHP', 'WP-Cron', 'E-mail'],
+    ],
+    [
+        'icon' => '🤖',
+        'title' => 'Integrace AI chatbota do WordPressu',
+        'goal' => 'Zpřístupnit AI chatbota (samostatnou React aplikaci) na webu ciirc.cvut.cz, který běží na WordPressu.',
+        'link' => 'https://ciirc.cvut.cz/',
+        'linkLabel' => 'Chatbot na ciirc.cvut.cz →',
+        'solution' => 'Odlehčený integrační plugin, který načítá skripty a styly aplikace a vytváří kořenový element pro její vykreslení. Chatbot tak běží ve WordPressu bez zásahu do svého zdrojového kódu.',
+        'tags' => ['WordPress', 'PHP', 'React', 'AI'],
+    ],
+    [
+        'icon' => '🐳',
+        'title' => 'Toto portfolio',
+        'goal' => 'Vlastní web jako vývojové prostředí pro PHP a Docker.',
+        'solution' => 'PHP web s vlastním routerem a hezkými URL, běžící v Docker kontejneru s Apache.',
+        'tags' => ['PHP', 'Docker', 'Apache'],
+        'link' => 'https://github.com/ZanetSabad/Portfolio-Docker-',
+        'linkLabel' => 'Kód na GitHubu →',
+    ],
+];
+
+$otherProjects = [
+    ['url' => 'http://sabizany.cz/', 'img' => 'bradavice.png', 'title' => 'Bradavice v PHP', 'tags' => ['PHP', 'Web'], 'color' => 'red'],
+    ['url' => 'https://my-portfolio-one-page.vercel.app/', 'img' => 'portfolio_mui.png', 'title' => 'Webová stránka', 'tags' => ['React', 'MUI'], 'color' => 'purple'],
+    ['url' => 'https://contact-form-fawn.vercel.app/', 'img' => 'Contact.png', 'title' => 'Kontaktní formulář', 'tags' => ['React', 'Form'], 'color' => 'blue'],
+    ['url' => 'https://aplikace-ukoly-2wdh.vercel.app/', 'img' => 'buy_list.png', 'title' => 'Aplikace na úkoly', 'tags' => ['React', 'To do'], 'color' => 'green'],
+    ['url' => 'https://portfolio-snowy-rho.vercel.app/', 'img' => 'portfolio-html.png', 'title' => 'Portfolio v HTML', 'tags' => ['HTML', 'CSS'], 'color' => 'orange'],
+];
+?>
 
 <main class="pf">
     <section class="pf-page-hero">
@@ -10,42 +57,46 @@
 
     <section class="pf-projects-preview pf-projects-full">
         <div class="pf-section-inner">
+            <div class="pf-case-grid">
+                <?php foreach ($caseStudies as $case): ?>
+                    <article class="pf-case">
+                        <div class="pf-case-head">
+                            <span><?= $case['icon'] ?></span>
+                            <h2><?= $case['title'] ?></h2>
+                        </div>
+                        <p><strong>Cíl:</strong> <?= $case['goal'] ?></p>
+                        <p><strong>Řešení:</strong> <?= $case['solution'] ?></p>
+                        <div class="pf-tags">
+                            <?php foreach ($case['tags'] as $tag): ?><span><?= $tag ?></span><?php endforeach; ?>
+                        </div>
+                        <?php if (!empty($case['link'])): ?>
+                            <a class="pf-case-link" href="<?= $case['link'] ?>" target="_blank" rel="noreferrer"><?= $case['linkLabel'] ?></a>
+                        <?php else: ?>
+                            <p class="pf-case-note">Interní projekt CIIRC ČVUT – kód nelze zveřejnit.</p>
+                        <?php endif; ?>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-projects-preview">
+        <div class="pf-section-inner">
+            <div class="pf-section-head">
+                <h2 class="pf-s-title">Další projekty</h2>
+            </div>
             <div class="pf-project-grid">
-                <a class="pf-project-card pf-card-purple" href="https://my-portfolio-one-page.vercel.app/" target="_blank" rel="noreferrer">
-                    <div class="pf-project-media"><img src="/assets/img/portfolio_mui.png" alt="Portfolio React"></div>
-                    <div class="pf-project-body">
-                        <div class="pf-tags"><span>React</span><span>MUI</span></div>
-                        <h3>Webová stránka</h3>
-                    </div>
-                </a>
-                <a class="pf-project-card pf-card-blue" href="https://contact-form-fawn.vercel.app/" target="_blank" rel="noreferrer">
-                    <div class="pf-project-media"><img src="/assets/img/Contact.png" alt="Kontaktní formulář"></div>
-                    <div class="pf-project-body">
-                        <div class="pf-tags"><span>React</span><span>Form</span></div>
-                        <h3>Kontaktní formulář</h3>
-                    </div>
-                </a>
-                <a class="pf-project-card pf-card-green" href="https://aplikace-ukoly-2wdh.vercel.app/" target="_blank" rel="noreferrer">
-                    <div class="pf-project-media"><img src="/assets/img/buy_list.png" alt="Aplikace na úkoly"></div>
-                    <div class="pf-project-body">
-                        <div class="pf-tags"><span>React</span><span>To do</span></div>
-                        <h3>Aplikace na úkoly</h3>
-                    </div>
-                </a>
-                <a class="pf-project-card pf-card-orange" href="https://portfolio-snowy-rho.vercel.app/" target="_blank" rel="noreferrer">
-                    <div class="pf-project-media"><img src="/assets/img/portfolio-html.png" alt="Portfolio v HTML"></div>
-                    <div class="pf-project-body">
-                        <div class="pf-tags"><span>HTML</span><span>CSS</span></div>
-                        <h3>Portfolio v HTML</h3>
-                    </div>
-                </a>
-                <a class="pf-project-card pf-card-red" href="http://sabizany.cz/" target="_blank" rel="noreferrer">
-                    <div class="pf-project-media"><img src="/assets/img/bradavice.png" alt="Bradavice v PHP"></div>
-                    <div class="pf-project-body">
-                        <div class="pf-tags"><span>PHP</span><span>Web</span></div>
-                        <h3>Bradavice v PHP</h3>
-                    </div>
-                </a>
+                <?php foreach ($otherProjects as $project): ?>
+                    <a class="pf-project-card pf-card-<?= $project['color'] ?>" href="<?= $project['url'] ?>" target="_blank" rel="noreferrer">
+                        <div class="pf-project-media"><img src="/assets/img/<?= $project['img'] ?>" alt="<?= $project['title'] ?>" loading="lazy"></div>
+                        <div class="pf-project-body">
+                            <div class="pf-tags">
+                                <?php foreach ($project['tags'] as $tag): ?><span><?= $tag ?></span><?php endforeach; ?>
+                            </div>
+                            <h3><?= $project['title'] ?></h3>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>

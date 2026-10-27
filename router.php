@@ -10,6 +10,7 @@ if ($path !== '/' && is_file($file)) {
 $routes = [
     '/' => 'index.php',
     '/o-mne' => 'about-me.php',
+    '/zkusenosti' => 'experience.php',
     '/skills' => 'skills.php',
     '/projekty' => 'portfolio.php',
     '/vzdelani' => 'education.php',
